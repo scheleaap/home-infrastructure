@@ -19,3 +19,4 @@ pip-selfcheck.json
 vault
 /src/experiments
 /TODO.md
+/src/roles/env-common
