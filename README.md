@@ -29,7 +29,7 @@ virtualenv .
 source bin/activate
 pip install ansible
 pip install docker
-pip install molecule
+pip install molecule=1.24.0
 ```
 
 ### Development
