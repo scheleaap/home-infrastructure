@@ -3,6 +3,7 @@ dependency:
   name: galaxy
 driver:
   name: docker
+  # name: vagrant
 docker:
   # See also http://molecule.readthedocs.io/en/latest/driver/docker/index.html#docker-driver-usage
   containers:
@@ -12,6 +13,21 @@ docker:
       port_bindings:
         "6600": "6600"
         "6680": "6680"
+      ansible_groups:
+        - group1
+vagrant:
+  platforms:
+    - name: xenial32
+      box: xenial32
+      box_url: https://vagrantcloud.com/ubuntu/boxes/xenial32/versions/16.04/providers/virtualbox.box
+  providers:
+    - name: virtualbox
+      type: virtualbox
+      options:
+        memory: 512
+        cpus: 1
+  instances:
+    - name: mopidy
       ansible_groups:
         - group1
 verifier:
