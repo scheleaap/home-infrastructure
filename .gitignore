@@ -18,5 +18,5 @@ pip-selfcheck.json
 # Mine
 vault
 /src/experiments
+/src/roles
 /TODO.md
-/src/roles/env-common
