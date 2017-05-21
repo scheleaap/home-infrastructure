@@ -14,6 +14,7 @@ pip-selfcheck.json
 # Other
 .cache
 .molecule
+site.retry
 
 # Mine
 vault

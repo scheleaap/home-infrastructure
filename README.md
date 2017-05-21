@@ -29,6 +29,7 @@ virtualenv .
 source bin/activate
 pip install ansible
 pip install docker
+pip install python-vagrant
 pip install molecule=1.24.0
 ```
 
@@ -54,5 +55,6 @@ apt-cache madison mopidy
 
 ```sh
 ansible-galaxy install -r requirements.yml -p roles/
-ansible-playbook site.yml --ask-vault-pass
+ansible-playbook site.yml -i hosts --ask-pass --ask-sudo-pass
+# --ask-vault-pass
 ```

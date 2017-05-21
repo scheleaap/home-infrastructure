@@ -1,13 +1,17 @@
 ---
-- hosts: all
-  remote_user: "{{ login_username }}"
-  become_user: root
-  become_method: sudo
-  roles:
-    - role: env-common
+#- hosts: all
+#  become_user: root
+#  become_method: sudo
+#  roles:
+#    - role: env-common
+#
+#- hosts: desktop
+#  become_user: root
+#  become_method: sudo
+#  roles:
+#    - role: env-desktop
 
 - hosts: media_center
-  remote_user: "{{ login_username }}"
   become_user: root
   become_method: sudo
   roles:
@@ -15,7 +19,7 @@
     #- role: snapserver
     #- role: kodi
 
-#- hosts: music_streamer
+#- hosts: media_player
 #  remote_user: "{{ login_username }}"
 #  become_user: root
 #  become_method: sudo
