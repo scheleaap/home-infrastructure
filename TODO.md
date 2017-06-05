@@ -28,3 +28,4 @@
 - Create actual Ansible configuration
 - Store Ansible secrets
 - Run Snapcast
+- Install SSH keys
