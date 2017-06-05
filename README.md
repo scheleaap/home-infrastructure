@@ -9,7 +9,8 @@ sudo apt-get install \
     apt-transport-https \
     ca-certificates \
     curl \
-    software-properties-common
+    software-properties-common \
+    sshpass
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
@@ -24,13 +25,13 @@ sudo usermod -a -G docker $(whoami)
 ### Installation
 
 ```
-sudo apt-get update && sudo apt-get install gcc python-pip libssl-dev libffi-dev virtualenv
-virtualenv .
-source bin/activate
-pip install ansible
-pip install docker
-pip install python-vagrant
-pip install molecule=1.24.0
+sudo apt-get update && sudo apt-get install gcc python-pip libssl-dev libffi-dev virtualenv && \
+virtualenv . && \
+source bin/activate && \
+pip install ansible && \
+pip install docker && \
+pip install python-vagrant && \
+pip install molecule==1.24.0
 ```
 
 ### Development
