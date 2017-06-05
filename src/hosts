@@ -1,8 +1,11 @@
 # Default inventory file
 
+localhost ansible_connection=local
+
 [media_center]
 #framboos
-lutt
+#lutt
+#virtualbox
 
 [media_player]
 #framboos
@@ -11,5 +14,5 @@ lutt
 #lutt
 
 [desktop]
-localhost ansible_connection=local
 lutt
+virtualbox
