@@ -1,7 +1,10 @@
 ---
 mopidy_hostname: "lutt.fritz.box"
+mopidy_iris_country: NL
+mopidy_iris_locale: nl_NL
 mopidy_lastfm_username: "{{ vault_mopidy_lastfm_username }}"
 mopidy_lastfm_password: "{{ vault_mopidy_lastfm_password }}"
 mopidy_spotify_username: "{{ vault_mopidy_spotify_username }}"
 mopidy_spotify_password: "{{ vault_mopidy_spotify_password }}"
 #mopidy_audio_output: "output = audioresample ! audioconvert ! audio/x-raw,rate=48000,channels=2,format=S16LE ! wavenc ! filesink location=/tmp/snapfifo"
+mopidy_soundcloud_auth_token: "{{ vault_mopidy_soundcloud_auth_token }}"
