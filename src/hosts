@@ -1,6 +1,10 @@
 # Default inventory file
 
 localhost ansible_connection=local
+framboos ansible_user=pi
+
+[raspberrypi]
+framboos
 
 [media_center]
 #framboos

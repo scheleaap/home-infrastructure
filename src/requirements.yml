@@ -6,6 +6,9 @@
 #- src: https://github.com/scheleaap/ansible-role-env-desktop.git
 #  version: master
 #  name: env-desktop
+#- src: https://github.com/scheleaap/ansible-role-raspberrypi.git
+#  version: master
+#  name: raspberrypi
 - src: https://github.com/scheleaap/ansible-role-mopidy.git
   version: master
   name: mopidy

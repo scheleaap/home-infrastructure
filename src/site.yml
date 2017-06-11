@@ -11,6 +11,12 @@
 #  roles:
 #    - role: env-desktop
 
+- hosts: raspberrypi
+  become_user: root
+  become_method: sudo
+  roles:
+    - role: raspberrypi
+
 - hosts: media_center
   become_user: root
   become_method: sudo
