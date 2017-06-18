@@ -56,6 +56,6 @@ apt-cache madison mopidy
 
 ```sh
 ansible-galaxy install -r requirements.yml -p roles/
-ansible-playbook site.yml -i hosts --ask-pass --ask-sudo-pass
+ansible-playbook site.yml -i hosts
 # --ask-vault-pass
 ```
