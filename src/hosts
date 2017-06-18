@@ -1,22 +1,19 @@
 # Default inventory file
 
-localhost ansible_connection=local
+#localhost ansible_connection=local
+#vagrant ansible_user=vagrant
 framboos ansible_user=pi
+lutt ansible_user=wout
 
 [raspberrypi]
 framboos
 
 [media_center]
-#framboos
-#lutt
-#virtualbox
+framboos
 
 [media_player]
-#framboos
-#zero1
-#zero2
-#lutt
+framboos
+lutt
 
 [desktop]
 lutt
-virtualbox

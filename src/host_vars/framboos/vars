@@ -1,2 +1,4 @@
 ---
 ansible_become_pass: "{{ vault_ansible_become_pass }}"
+snapcast_architecture: armhf
+snapcast_client_daemon_options: --soundcard 22

@@ -1,15 +1,15 @@
 ---
-#- hosts: all
-#  become_user: root
-#  become_method: sudo
-#  roles:
-#    - role: env-common
-#
-#- hosts: desktop
-#  become_user: root
-#  become_method: sudo
-#  roles:
-#    - role: env-desktop
+- hosts: all
+  become_user: root
+  become_method: sudo
+  roles:
+    - role: env-common
+
+- hosts: desktop
+  become_user: root
+  become_method: sudo
+  roles:
+    - role: env-desktop
 
 - hosts: raspberrypi
   become_user: root
@@ -21,13 +21,12 @@
   become_user: root
   become_method: sudo
   roles:
+    - role: snapcast
     - role: mopidy
-    #- role: snapserver
     #- role: kodi
 
-#- hosts: media_player
-#  remote_user: "{{ login_username }}"
-#  become_user: root
-#  become_method: sudo
-#  roles:
-#    - role: snapclient
+- hosts: media_player
+  become_user: root
+  become_method: sudo
+  roles:
+    - role: snapcast

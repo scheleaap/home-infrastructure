@@ -22,10 +22,7 @@
 
 ## General & Other
 
-- Configure 2nd sound card
 - Install Kodi + plugins + configure proxy NL
 - Automatic Raspbian updates
-- Create actual Ansible configuration
 - Store Ansible secrets
-- Run Snapcast
 - Install SSH keys
