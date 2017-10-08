@@ -26,3 +26,4 @@
 - Automatic Raspbian updates
 - Store Ansible secrets
 - Install SSH keys
+- Infrared control
