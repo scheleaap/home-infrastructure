@@ -3,7 +3,7 @@
 #localhost ansible_connection=local
 #vagrant ansible_user=vagrant
 framboos ansible_user=pi
-lutt ansible_user=wout
+#lutt ansible_user=wout
 
 [raspberrypi]
 framboos
@@ -13,7 +13,7 @@ framboos
 
 [media_player]
 framboos
-lutt
+#lutt
 
 [desktop]
-lutt
+#lutt
