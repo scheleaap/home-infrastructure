@@ -1,5 +1,28 @@
 # Notes
 
+## Preparation
+
+On the Raspberry Pi:
+
+1. Enable ssh:
+  ```
+  sudo systemctl enable ssh
+  sudo systemctl start ssh
+  ```
+2. Create SSH directory:
+  ```
+  cd ~
+  install -d -m 700 ~/.ssh
+  ```
+3. Force audio through 3.5 mm jack: `sudo raspi-config`
+
+On another machine:
+
+1. Copy public key to authorized_keys:
+  ```
+  cat ~/.ssh/id_rsa.pub | ssh pi@framboos 'cat >> .ssh/authorized_keys'
+  ```
+
 ## Docker
 
 ### Installation
