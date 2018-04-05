@@ -4,16 +4,20 @@
 #vagrant ansible_user=vagrant
 framboos ansible_user=pi
 #lutt ansible_user=wout
+#virtualbox-debian user=wout
 
 [raspberrypi]
 framboos
+#virtualbox-debian
 
 [media_center]
 framboos
+#virtualbox-debian
 
 [media_player]
 framboos
 #lutt
+#virtualbox-debian
 
 [desktop]
 #lutt
