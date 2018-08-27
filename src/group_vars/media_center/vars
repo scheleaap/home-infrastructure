@@ -1,6 +1,6 @@
 ---
 mopidy_hostname: "::"
-mopidy_iris_version: 3.17.2
+mopidy_iris_version: 3.24.0
 mopidy_iris_country: NL
 mopidy_iris_locale: nl_NL
 mopidy_lastfm_username: "{{ vault_mopidy_lastfm_username }}"
@@ -11,5 +11,5 @@ mopidy_spotify_client_id: "{{ vault_mopidy_spotify_client_id }}"
 mopidy_spotify_client_secret: "{{ vault_mopidy_spotify_client_secret }}"
 mopidy_audio_output: "audioresample ! audioconvert ! audio/x-raw,rate=48000,channels=2,format=S16LE ! wavenc ! filesink location=/tmp/snapfifo"
 mopidy_soundcloud_auth_token: "{{ vault_mopidy_soundcloud_auth_token }}"
-snapcast_version: 0.12.0
+snapcast_version: 0.15.0
 snapcast_install_server: true
