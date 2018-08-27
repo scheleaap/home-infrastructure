@@ -4,17 +4,20 @@
 
 On the Raspberry Pi:
 
-1. Enable ssh:
+1. Execute `sudo raspi-config` to setup keyboard, locale, hostname, etc.
+
+2. Enable ssh:
   ```
   sudo systemctl enable ssh
   sudo systemctl start ssh
   ```
-2. Create SSH directory:
+3. Create SSH directory:
   ```
   cd ~
   install -d -m 700 ~/.ssh
   ```
-3. Force audio through 3.5 mm jack: `sudo raspi-config`
+
+4. Force audio through 3.5 mm jack: `sudo raspi-config`
 
 On another machine:
 
