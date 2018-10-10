@@ -1,4 +1,4 @@
-# Notes
+# Configuration for Home Computers
 
 ## Preparation
 

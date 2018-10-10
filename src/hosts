@@ -1,8 +1,8 @@
 # Default inventory file
 
-framboos ansible_user=pi
 #localhost ansible_connection=local
-#lutt ansible_user=wout
+framboos ansible_user=pi
+lutt ansible_user=wout
 #vagrant ansible_user=vagrant
 #virtualbox-debian user=wout
 
@@ -11,16 +11,16 @@ framboos
 #virtualbox-debian
 
 [media_center]
-framboos
 #localhost
+framboos
 #virtualbox-debian
 
 [media_player]
-framboos
 #localhost
+framboos
 #lutt
 #virtualbox-debian
 
 [desktop]
 #localhost
-#lutt
+lutt
