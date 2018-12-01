@@ -24,7 +24,7 @@
 1. **Run from another machine:**<br>
    Copy public key to authorized_keys:
    ```bash
-   cat ~/.ssh/id_rsa.pub | ssh pi@framboos 'cat >> .ssh/authorized_keys'
+   cat ~/.ssh/id_rsa.pub | ssh <user>@<host> 'cat >> .ssh/authorized_keys'
    ```
 
 ### Raspberry Pi
@@ -80,7 +80,7 @@ source bin/activate && \
 pip install ansible && \
 pip install docker && \
 pip install python-vagrant && \
-pip install molecule==1.24.0
+pip install molecule==1.25.0
 ```
 
 ### Testing a role
