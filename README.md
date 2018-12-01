@@ -2,35 +2,59 @@
 
 ## Preparation
 
-On the Raspberry Pi:
+### Master Machine
+
+1. Go to the target directory and run:
+   ```bash
+   sudo apt-get update && \
+   sudo apt-get install python-pip virtualenv && \
+   virtualenv . && \
+   source bin/activate && \
+   pip install ansible
+   ```
+
+### All Target Machines
+
+1. Create SSH directory:
+   ```bash
+   cd ~
+   install -d -m 700 ~/.ssh
+   ```
+
+1. **Run from another machine:**<br>
+   Copy public key to authorized_keys:
+   ```bash
+   cat ~/.ssh/id_rsa.pub | ssh pi@framboos 'cat >> .ssh/authorized_keys'
+   ```
+
+### Raspberry Pi
 
 1. Execute `sudo raspi-config` to setup keyboard, locale, hostname, etc.
 
-2. Enable ssh:
-  ```
-  sudo systemctl enable ssh
-  sudo systemctl start ssh
-  ```
-3. Create SSH directory:
-  ```
-  cd ~
-  install -d -m 700 ~/.ssh
-  ```
+1. Enable ssh:
+   ```bash
+   sudo systemctl enable ssh
+   sudo systemctl start ssh
+   ```
 
-4. Force audio through 3.5 mm jack: `sudo raspi-config`
+1. Force audio through 3.5 mm jack: `sudo raspi-config`
 
-On another machine:
 
-1. Copy public key to authorized_keys:
-  ```
-  cat ~/.ssh/id_rsa.pub | ssh pi@framboos 'cat >> .ssh/authorized_keys'
-  ```
+## Running It
 
-## Docker
-
-### Installation
-
+```bash
+source bin/activate
+ansible-galaxy install -r requirements.yml -p roles/
+ansible-playbook site.yml -i hosts
+# --ask-vault-pass
 ```
+
+
+## Ansible Role Development
+
+### Docker Installation
+
+```bash
 sudo apt-get install \
     apt-transport-https \
     ca-certificates \
@@ -46,12 +70,11 @@ sudo apt-get update && sudo apt-get install docker-ce
 sudo usermod -a -G docker $(whoami)
 ```
 
-## Molecule
+### Molecule Installation
 
-### Installation
-
-```
-sudo apt-get update && sudo apt-get install gcc python-pip libssl-dev libffi-dev virtualenv && \
+```bash
+sudo apt-get update && \
+sudo apt-get install gcc python-pip libssl-dev libffi-dev virtualenv && \
 virtualenv . && \
 source bin/activate && \
 pip install ansible && \
@@ -60,28 +83,19 @@ pip install python-vagrant && \
 pip install molecule==1.24.0
 ```
 
-### Development
-
-```sh
+### Testing a role
+```bash
 cd src/roles/mopidy
 molecule test
 ```
 
 In the container:
-```sh
+```bash
 nohup /usr/bin/mopidy --config /etc/mopidy/mopidy.conf &
 ```
 
 Useful commands:
-
+```bash
 docker exec -it mopidy bash
 apt-cache madison mopidy
-
-
-## Running it
-
-```sh
-ansible-galaxy install -r requirements.yml -p roles/
-ansible-playbook site.yml -i hosts
-# --ask-vault-pass
 ```
