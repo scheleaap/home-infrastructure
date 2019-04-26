@@ -1,6 +1,6 @@
 ---
 mopidy_hostname: "::"
-mopidy_iris_version: 3.24.0
+mopidy_iris_version: 3.37.0
 mopidy_iris_country: NL
 mopidy_iris_locale: nl_NL
 mopidy_lastfm_username: "{{ vault_mopidy_lastfm_username }}"
