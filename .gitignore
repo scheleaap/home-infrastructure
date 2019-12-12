@@ -3,13 +3,8 @@
 __pycache__/
 
 # Virtualenv
-/bin/
-/etc/
-/include/
-/lib/
-/local/
-/share/
-pip-selfcheck.json
+.venv
+Pipfile.lock
 
 # Other
 .cache
