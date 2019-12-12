@@ -1,3 +1,4 @@
 ---
-snapcast_version: 0.17.1
+snapcast_version: 0.15.0
+snapcast_version_suffix: ""
 snapcast_install_client: true

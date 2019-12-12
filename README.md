@@ -52,13 +52,14 @@ pipenv update
 
 ## Running It
 
-```bash
-pipenv shell
-ansible-galaxy install -r requirements.yml -p roles/
-ansible-playbook site.yml -i hosts
-# --ask-vault-pass
-# --ask-become-pass
-```
+1. Define all secrets (`vault` files)
+2. ```bash
+   pipenv shell
+   ansible-galaxy install -r requirements.yml -p roles/
+   ansible-playbook site.yml -i hosts
+   # --ask-vault-pass
+   # --ask-become-pass
+   ```
 
 
 ## Ansible Role Development
