@@ -5,9 +5,16 @@ rfid_jukebox_albums:
   "0426bc4a325e81": "spotify:album:02Ast9sM8awNiA2ViVjO4Q"  # Nightfall in Middle Earth
   "042ebc4a325e81": "spotify:album:1YaUAkNsLKXtJfb0FVZcyu"  # New York - Addis - London
   "0436bc4a325e81": "http://icecast.omroep.nl/radio1-bb-mp3"  # NPO Radio 1
-  "044bbb4a325e81": "spotify:album:0wKklfUh0GTGAICfuQxpMP"  # Angola 72/74
-  "0446bb4a325e81": "spotify:album:3DrgM5X3yX1JP1liNLAOHI"  # The Suburbs
+  "044bbb4a325e81": "spotify:album:0wKklfUh0GTGAICfuQxpMP"  # Bonga - Angola 72/74
+  "0446bb4a325e81": "spotify:album:3DrgM5X3yX1JP1liNLAOHI"  # Arcade Fire - The Suburbs
   "0442bb4a325e81": "spotify:playlist:7klfbs5nEXp6KiVHcHcZXz"  # Feestselectie
+  "043fbc4a325e81": "spotify:album:7EOQggjtK8JCqeRz9IG33e"  # Charles Mingus - Blues & Roots
+  "043bbc4a325e81": "spotify:album:3ekjz97bhwf8OVWLGF46KM"  # Josh Garrels - Jacaranda
+  "04b2b37af36780": "spotify:album:0GwClXkQ5pSjShjpWbPcrE"  # Charizma & Peanut Butter Wolf - Big Shots
+  "04edb37af36780": "spotify:album:3S6qaM2ijmVtz68R6QMlPs"  # Johann Sebastian Bach - Bach: Violin Concertos
+  "042ab37af36780": "spotify:album:3eZ9T4vXOtLpUQgWDA0nRG"  # Mensenkinderen - Wij leven van de wind
+  "04ddb37af36780": "spotify:album:5xfPV8byJVCmeqe1LeVFqz"  # Guru - Jazzmatazz Volume II
+  "04d4b37af36780": "spotify:album:7o9rYmsikfmzf2Z3mwSBNA"  # Rusko - Songs
 
 rfid_jukebox_commands:
   "ebd1a421": "stop"  # Big chipcard
