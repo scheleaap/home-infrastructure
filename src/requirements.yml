@@ -12,6 +12,9 @@
 - src: https://github.com/scheleaap/ansible-role-raspberrypi.git
   version: master
   name: raspberrypi
+- src: https://github.com/scheleaap/ansible-role-rfid-jukebox.git
+  version: master
+  name: rfid-jukebox
 - src: https://github.com/scheleaap/ansible-role-snapcast.git
   version: master
   name: snapcast

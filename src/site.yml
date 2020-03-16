@@ -11,6 +11,12 @@
  roles:
    - role: env-desktop
 
+- hosts: jukebox
+  become_user: root
+  become_method: sudo
+  roles:
+    - role: rfid-jukebox
+
 - hosts: media_center
   become_user: root
   become_method: sudo
