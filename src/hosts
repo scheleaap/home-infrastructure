@@ -6,9 +6,9 @@ framboos ansible_user=pi
 #vagrant ansible_user=vagrant
 #virtualbox-debian user=wout
 
-[raspberrypi]
-framboos
-#virtualbox-debian
+[desktop]
+#localhost
+#lutt
 
 [media_center]
 #localhost
@@ -21,6 +21,5 @@ framboos
 #lutt
 #virtualbox-debian
 
-[desktop]
-#localhost
-#lutt
+[raspberrypi]
+framboos

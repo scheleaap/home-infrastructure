@@ -13,5 +13,7 @@ site.retry
 
 # Mine
 vault
+vault.yml
+vault.yaml
 /src/experiments
 /src/roles
