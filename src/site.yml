@@ -1,15 +1,15 @@
 ---
 - hosts: all
- become_user: root
- become_method: sudo
- roles:
-   - role: env-common
+  become_user: root
+  become_method: sudo
+  roles:
+    - role: env-common
 
 - hosts: desktop
- become_user: root
- become_method: sudo
- roles:
-   - role: env-desktop
+  become_user: root
+  become_method: sudo
+  roles:
+    - role: env-desktop
 
 - hosts: jukebox
   become_user: root
@@ -31,7 +31,7 @@
     - role: snapcast
 
 - hosts: raspberrypi
- become_user: root
- become_method: sudo
- roles:
-   - role: raspberrypi
+  become_user: root
+  become_method: sudo
+  roles:
+    - role: raspberrypi
