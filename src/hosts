@@ -2,6 +2,7 @@
 
 #localhost ansible_connection=local
 framboos ansible_user=pi
+braam ansible_user=pi
 #lutt ansible_user=wout
 #vagrant ansible_user=vagrant
 #virtualbox-debian user=wout
@@ -21,8 +22,10 @@ framboos
 [media_player]
 #localhost
 framboos
+braam
 #lutt
 #virtualbox-debian
 
 [raspberrypi]
 framboos
+braam
