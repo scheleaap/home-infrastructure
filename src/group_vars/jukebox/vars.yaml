@@ -16,6 +16,13 @@ rfid_jukebox_albums:
   "042ab37af36780": "spotify:album:3eZ9T4vXOtLpUQgWDA0nRG"  # Mensenkinderen - Wij leven van de wind
   "04ddb37af36780": "spotify:album:5xfPV8byJVCmeqe1LeVFqz"  # Guru - Jazzmatazz Volume II
   "04d4b37af36780": "spotify:album:7o9rYmsikfmzf2Z3mwSBNA"  # Rusko - Songs
+  "0489b07af36780": "spotify:album:7u6zL7kqpgLPISZYXNTgYk"  # Daft Punk - Alive 2007
+  "0481b07af36780": "spotify:playlist:3sAzPTdA6gIcHUYhw50912"  # I Like Sax
+  "048cb07af36781": "spotify:album:0ZvyleSEIlDbklGZ995APl"  # GoGo Penguin - v2.0
+  "0489b17af36781": "spotify:album:779P1LBXo4NylXQ0sHSKqT"  # GoGo Penguin - Fanfares
+  "0442b17af36781": "spotify:album:7Eoz7hJvaX1eFkbpQxC5PA"  # John Coltrane - A Love Supreme
+  "0471b07af36780": "spotify:album:3nLStxdTkSzihxm7FTLzCP"  # John Coltrane - My Favorite Things
+  "0479b07af36780": "spotify:album:4A9NpSjSaA2cJss3ksEFVE"  # Moondog - Sax Pax For A Sax
 
 rfid_jukebox_commands:
   "ebd1a421": "shutdown"  # Big chipcard
