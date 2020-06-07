@@ -18,4 +18,4 @@ rfid_jukebox_albums:
   "04d4b37af36780": "spotify:album:7o9rYmsikfmzf2Z3mwSBNA"  # Rusko - Songs
 
 rfid_jukebox_commands:
-  "ebd1a421": "stop"  # Big chipcard
+  "ebd1a421": "shutdown"  # Big chipcard

@@ -13,6 +13,7 @@ braam ansible_user=pi
 
 [jukebox]
 framboos
+braam
 
 [media_center]
 #localhost
