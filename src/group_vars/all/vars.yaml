@@ -1,4 +1,6 @@
 ---
-git_user_email: git@wout.maaskant.info
-git_user_name: scheleaap
-git_cache_timeout: 32400
+env_common_git_user_email: git@wout.maaskant.info
+env_common_git_user_name: scheleaap
+env_common_git_cache_timeout: 32400
+env_common_zsh_git_user_email: "{{ env_common_git_user_email }}"
+env_common_zsh_git_user_name: "{{ env_common_git_user_name }}"
