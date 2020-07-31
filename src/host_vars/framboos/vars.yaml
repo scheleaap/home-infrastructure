@@ -2,4 +2,4 @@
 ansible_become_pass: "{{ vault_ansible_become_pass }}"
 raspberrypi_audio_mode: usb_audio_card
 snapcast_architecture: armhf
-snapcast_client_daemon_options: --soundcard 27
+snapcast_client_daemon_options: --soundcard default:CARD=Device
