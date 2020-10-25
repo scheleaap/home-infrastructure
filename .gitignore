@@ -15,5 +15,5 @@ site.retry
 vault
 vault.yml
 vault.yaml
-/src/experiments
-/src/roles
+experiments/
+roles/
