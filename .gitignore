@@ -4,7 +4,6 @@ __pycache__/
 
 # Virtualenv
 .venv
-Pipfile.lock
 
 # Other
 .cache
