@@ -1,5 +1,4 @@
 ---
-
 - src: https://github.com/scheleaap/ansible-role-env-common.git
   version: master
   name: env-common
@@ -12,6 +11,9 @@
 - src: https://github.com/scheleaap/ansible-role-raspberrypi.git
   version: master
   name: raspberrypi
+- src: https://github.com/scheleaap/ansible-role-raspotify.git
+  version: master
+  name: raspotify
 - src: https://github.com/scheleaap/ansible-role-rfid-jukebox.git
   version: master
   name: rfid-jukebox

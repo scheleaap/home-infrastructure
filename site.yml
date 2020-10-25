@@ -22,13 +22,18 @@
   become_method: sudo
   roles:
     - role: snapcast
+      tags: snapcast
     - role: mopidy
+      tags: mopidy
+    - role: raspotify
+      tags: raspotify
 
 - hosts: media_player
   become_user: root
   become_method: sudo
   roles:
     - role: snapcast
+      tags: snapcast
 
 - hosts: raspberrypi
   become_user: root

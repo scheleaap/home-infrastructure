@@ -57,6 +57,7 @@ pipenv update
    pipenv shell
    ansible-galaxy install -r requirements.yml -p roles/
    ansible-playbook site.yml -i hosts
+   ansible-playbook site.yml -i hosts -l media_center --tags raspotify
    # --ask-vault-pass
    # --ask-become-pass
    ```
