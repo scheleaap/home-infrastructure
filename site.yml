@@ -16,6 +16,7 @@
   become_method: sudo
   roles:
     - role: rfid-jukebox
+      tags: rfid-jukebox
 
 - hosts: media_center
   become_user: root
