@@ -23,6 +23,9 @@ rfid_jukebox_albums:
   "0442b17af36781": "spotify:album:7Eoz7hJvaX1eFkbpQxC5PA"  # John Coltrane - A Love Supreme
   "0471b07af36780": "spotify:album:3nLStxdTkSzihxm7FTLzCP"  # John Coltrane - My Favorite Things
   "0479b07af36780": "spotify:album:4A9NpSjSaA2cJss3ksEFVE"  # Moondog - Sax Pax For A Sax
+  "04bcb27af36780": "http://www.ndr.de/resources/metadaten/audio/m3u/ndr2.m3u"  # NDR2
+  "04b4b27af36780": "spotify:playlist:3Zswwtk7WLHFnOV84UFB68"  # Sharoni
 
 rfid_jukebox_commands:
   "ebd1a421": "shutdown"  # Big chipcard
+  "b02c3f32": "shutdown"  # Big chipcard
