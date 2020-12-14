@@ -4,4 +4,3 @@ vault_mopidy_spotify_username: TODO
 vault_mopidy_spotify_password: TODO
 vault_mopidy_spotify_client_id: TODO
 vault_mopidy_spotify_client_secret: TODO
-vault_mopidy_soundcloud_auth_token: TODO
