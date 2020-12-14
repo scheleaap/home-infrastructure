@@ -14,6 +14,6 @@ mopidy_spotify_allow_cache: false
 mopidy_audio_output: "audioresample ! audioconvert ! audio/x-raw,rate=48000,channels=2,format=S16LE ! wavenc ! filesink location=/tmp/snapfifo"
 raspotify_backend_args: "--backend pipe --device /tmp/snapfifo"
 raspotify_device_name: "🙉"
-snapcast_version: "0.20.0"
+snapcast_version: "0.22.0"
 snapcast_install_server: true
 snapcast_server_buffer_ms: 400
