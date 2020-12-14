@@ -27,5 +27,6 @@ rfid_jukebox_albums:
   "04b4b27af36780": "spotify:playlist:3Zswwtk7WLHFnOV84UFB68"  # Sharoni
 
 rfid_jukebox_commands:
-  "ebd1a421": "shutdown"  # Big chipcard
-  "b02c3f32": "shutdown"  # Big chipcard
+  "ebd1a421": "stop"  # Big chipcard
+  "b02c3f32": "stop"  # Big chipcard
+  "a98bbcb8": "shutdown"  # Blue transponder
