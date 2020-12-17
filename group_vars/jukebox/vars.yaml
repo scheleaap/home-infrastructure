@@ -1,5 +1,5 @@
 ---
-rfid_jukebox_version: "1.1.7"
+rfid_jukebox_version: "1.2.0"
 rfid_jukebox_mopidy_base_url: "http://framboos:6680/mopidy/rpc"
 rfid_jukebox_albums:
   "042abc4a325e81": "spotify:album:2WT1pbYjLJciAR26yMebkH"  # The Dark Side Of The Moon
@@ -30,3 +30,11 @@ rfid_jukebox_commands:
   "ebd1a421": "stop"  # Big chipcard
   "b02c3f32": "stop"  # Big chipcard
   "a98bbcb8": "shutdown"  # Blue transponder
+
+rfid_jukebox_hooks:
+  "on-card-change": "play -q /usr/local/share/sounds/rfid-jukebox/yaru-message-new-instant.oga -t alsa"
+  "on-initialize": "play -q /usr/share/sounds/freedesktop/stereo/service-login.oga -t alsa"
+
+raspberrypi_audio_users:
+  - pi
+  - rfid-jukebox

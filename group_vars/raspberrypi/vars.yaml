@@ -1,0 +1,2 @@
+---
+raspberrypi_shutdown_hook_command: "play -q /usr/local/share/sounds/rfid-jukebox/yaru-message-new-instant.oga -t alsa"

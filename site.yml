@@ -14,9 +14,28 @@
 - hosts: jukebox
   become_user: root
   become_method: sudo
+  tags: rfid-jukebox
   roles:
     - role: rfid-jukebox
-      tags: rfid-jukebox
+  tasks:
+    - name: "Install packages to play audio files from the command line"
+      become: true
+      apt:
+        name: "{{ packages }}"
+      vars:
+        packages:
+          - sox
+          - libsox-fmt-all
+    - name: "Ensure /usr/local/share/sounds/rfid-jukebox/ exists"
+      become: true
+      file:
+        path: /usr/local/share/sounds/rfid-jukebox/
+        state: directory
+    - name: "Copy audio file for notifications"
+      become: true
+      copy:
+        src: /usr/share/sounds/Yaru/stereo/message-new-instant.oga
+        dest: /usr/local/share/sounds/rfid-jukebox/yaru-message-new-instant.oga
 
 - hosts: media_center
   become_user: root
@@ -39,5 +58,6 @@
 - hosts: raspberrypi
   become_user: root
   become_method: sudo
+  tags: raspberrypi
   roles:
     - role: raspberrypi
