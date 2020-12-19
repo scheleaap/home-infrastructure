@@ -36,6 +36,19 @@
       copy:
         src: /usr/share/sounds/Yaru/stereo/message-new-instant.oga
         dest: /usr/local/share/sounds/rfid-jukebox/yaru-message-new-instant.oga
+    - name: "Copy audio files for notifications"
+      become: true
+      copy:
+        src: sounds/
+        dest: /usr/local/share/sounds/rfid-jukebox/
+    - name: "Ensure all sound scripts are executable"
+      become: true
+      file:
+        path: "{{ item }}"
+        mode: 0755
+      loop:
+        - /usr/local/share/sounds/rfid-jukebox/one.sh
+        - /usr/local/share/sounds/rfid-jukebox/random.sh
 
 - hosts: media_center
   become_user: root

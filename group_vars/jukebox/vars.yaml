@@ -32,8 +32,13 @@ rfid_jukebox_commands:
   "a98bbcb8": "shutdown"  # Blue transponder
 
 rfid_jukebox_hooks:
-  "on-card-change": "play -q /usr/local/share/sounds/rfid-jukebox/yaru-message-new-instant.oga -t alsa"
-  "on-initialize": "play -q /usr/share/sounds/freedesktop/stereo/service-login.oga -t alsa"
+  # "on-card-change": "bash -c 'sleep 0.25 && AUDIODEV=dmix:CARD=Device play -q /usr/local/share/sounds/rfid-jukebox/yaru-message-new-instant.oga -t alsa'"
+  "on-initialize": "/usr/local/share/sounds/rfid-jukebox/random.sh on-initialize"
+  "on-pause": "/usr/local/share/sounds/rfid-jukebox/one.sh yaru-message-new-instant.oga"
+  "on-play": "/usr/local/share/sounds/rfid-jukebox/random.sh on-play"
+  "on-resume": "/usr/local/share/sounds/rfid-jukebox/one.sh yaru-message-new-instant.oga"
+  # "on-shutdown": "/usr/local/share/sounds/rfid-jukebox/random.sh on-shutdown"
+  "on-stop": "/usr/local/share/sounds/rfid-jukebox/random.sh on-stop"
 
 raspberrypi_audio_users:
   - pi
