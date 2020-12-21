@@ -1,31 +1,20 @@
-# Default inventory file
-
 #localhost ansible_connection=local
 framboos ansible_user=pi ansible_python_interpreter=auto ansible_become_pass=raspberry
 braam ansible_user=pi ansible_python_interpreter=auto ansible_become_pass=raspberry
-#lutt ansible_user=wout
-#vagrant ansible_user=vagrant
-#virtualbox-debian user=wout
 
 [desktop]
-#localhost
-#lutt
 
 [jukebox]
 framboos
 braam
 
 [media_center]
-#localhost
 framboos
-#virtualbox-debian
 
 [media_player]
 #localhost
 framboos
 braam
-#lutt
-#virtualbox-debian
 
 [raspberrypi]
 framboos
