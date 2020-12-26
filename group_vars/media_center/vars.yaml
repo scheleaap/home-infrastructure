@@ -14,6 +14,7 @@ mopidy_spotify_client_id: "{{ vault_mopidy_spotify_client_id }}"
 mopidy_spotify_client_secret: "{{ vault_mopidy_spotify_client_secret }}"
 mopidy_spotify_allow_cache: false
 mopidy_audio_output: "audioresample ! audioconvert ! audio/x-raw,rate=48000,channels=2,format=S16LE ! wavenc ! filesink location=/tmp/snapfifo"
+mopidy_version: "3.1.1-1"
 raspotify_backend_args: "--backend pipe --device /tmp/snapfifo"
 raspotify_device_name: "🙉"
 snapcast_version: "0.22.0"
