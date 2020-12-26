@@ -1,3 +1,4 @@
 ---
 raspberrypi_audio_mode: justboom_dac
 snapcast_architecture: armhf
+sounds_audio_device: dmix:CARD=sndrpijustboomd

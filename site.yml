@@ -39,16 +39,17 @@
     - name: "Copy audio files for notifications"
       become: true
       copy:
-        src: sounds/
+        src: files/sounds/
         dest: /usr/local/share/sounds/rfid-jukebox/
-    - name: "Ensure all sound scripts are executable"
+    - name: "Copy sound scripts for notifications"
       become: true
-      file:
-        path: "{{ item }}"
+      template:
+        src: "templates/{{ item }}.j2"
+        dest: "/usr/local/share/sounds/rfid-jukebox/{{ item }}"
         mode: 0755
       loop:
-        - /usr/local/share/sounds/rfid-jukebox/one.sh
-        - /usr/local/share/sounds/rfid-jukebox/random.sh
+        - one.sh
+        - random.sh
 
 - hosts: media_center
   become_user: root

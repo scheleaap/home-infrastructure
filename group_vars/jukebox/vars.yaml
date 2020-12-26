@@ -43,3 +43,5 @@ rfid_jukebox_hooks:
 raspberrypi_audio_users:
   - pi
   - rfid-jukebox
+
+sounds_delay: 0.2

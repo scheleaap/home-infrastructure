@@ -2,3 +2,4 @@
 raspberrypi_audio_mode: usb_audio_card
 snapcast_architecture: armhf
 snapcast_client_daemon_options: --soundcard default:CARD=Device
+sounds_audio_device: dmix:CARD=Device

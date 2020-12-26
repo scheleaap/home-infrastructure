@@ -1,0 +1,6 @@
+#!/bin/sh
+basedir=$(dirname "$0")
+
+sleep {{ sounds_delay }} && \
+AUDIODEV={{ sounds_audio_device }} \
+  play -q $basedir/$1 -t alsa

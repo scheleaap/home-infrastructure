@@ -1,6 +1,6 @@
 #!/bin/sh
 basedir=$(dirname "$0")
 
-sleep 0.2 && \
-AUDIODEV=dmix:CARD=Device \
+sleep {{ sounds_delay }} && \
+AUDIODEV={{ sounds_audio_device }} \
   play -q $(find $basedir/$1 -type f | shuf -n1) -t alsa
