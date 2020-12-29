@@ -5,7 +5,7 @@ This is an Ansible Playbook for my home infrastructure (mostly Raspberry Pi's, s
 
 ## Running it
 
-_(See below for setup instructions)_
+_(See below for [setup instructions](#setup))_
 
 1. Modify `hosts` and `site.yml` as appropriate.
 1. Make sure you have defined all secrets: rename all `vault.yaml.default` files to `vault.yaml` and fill in the values as appropriate.
