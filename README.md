@@ -1,114 +1,63 @@
-# Configuration for Home Computers
+# Home Infrastructure
 
-## Preparation
-
-### Master Machine
-
-Go to the target directory and run:
-
-```bash
-# Install pip3 and pipenv (needed only once)
-sudo apt purge python-pip && \
-sudo apt install python3-pip && \
-pip3 install --user pipenv
-
-# Create venv and activate
-PATH=~/.local/bin:$PATH && \
-pipenv --three && \
-pipenv shell
-
-# Install project dependencies
-pipenv update
-```
+This is an Ansible Playbook for my home infrastructure (mostly Raspberry Pi's, so far).
 
 
-### All Target Machines
+## Running it
 
-1. Create SSH directory:
-   ```bash
-   cd ~
-   install -d -m 700 ~/.ssh
-   ```
+_(See below for setup instructions)_
 
-1. **Run from another machine:**<br>
-   Copy public key to authorized_keys:
-   ```bash
-   cat ~/.ssh/id_rsa.pub | ssh <user>@<host> 'cat >> .ssh/authorized_keys'
-   ```
-
-
-### Raspberry Pi
-
-1. Execute `sudo raspi-config` to setup keyboard, locale, hostname, etc.
-
-1. Enable ssh:
-   ```bash
-   sudo systemctl enable ssh
-   sudo systemctl start ssh
-   ```
-
-1. Force audio through 3.5 mm jack: `sudo raspi-config`
-
-
-## Running It
-
-1. Define all secrets (`vault` files)
-2. ```bash
-   pipenv shell
-   ansible-galaxy install -r requirements.yml -p roles/
-   ansible-playbook site.yml -i hosts
-   ansible-playbook site.yml -i hosts -l media_center --tags raspotify
+1. Modify `hosts` and `site.yml` as appropriate.
+1. Make sure you have defined all secrets: rename all `vault.yaml.default` files to `vault.yaml` and fill in the values as appropriate.
+1. ```sh
+   pipenv run ansible-galaxy install -r requirements.yml -p roles/
+   pipenv run ansible-playbook site.yml -i hosts
+   pipenv run ansible-playbook site.yml -i hosts -l media_center --tags raspotify
    # --ask-vault-pass
    # --ask-become-pass
    ```
 
 
-## Ansible Role Development
+## Setup
 
-### Docker Installation
+### Master machine
 
-```bash
-sudo apt-get install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    software-properties-common \
-    sshpass
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
-sudo apt-get update && sudo apt-get install docker-ce
-sudo usermod -a -G docker $(whoami)
+On the machine you would like to run this playbook on, run:
+
+```sh
+# Install pip3 and pipenv
+sudo apt install python3-pip && \
+pip3 install --user pipenv
+
+# Create pipenv with installed dependencies
+PATH=~/.local/bin:$PATH && \
+pipenv --three && \
+pipenv update
 ```
 
-### Molecule Installation
 
-```bash
-sudo apt-get update && \
-sudo apt-get install gcc python-pip libssl-dev libffi-dev virtualenv && \
-virtualenv . && \
-source bin/activate && \
-pip install ansible && \
-pip install docker && \
-pip install python-vagrant && \
-pip install molecule==1.25.0
-```
+### Adding a new target machine
 
-### Testing a role
-```bash
-cd src/roles/mopidy
-molecule test
-```
+On every target machine you would like to mananage, execute the following steps:
 
-In the container:
-```bash
-nohup /usr/bin/mopidy --config /etc/mopidy/mopidy.conf &
-```
+1. _(Raspberry Pi only)_ Execute `sudo raspi-config` to setup keyboard, locale, hostname, etc.
 
-Useful commands:
-```bash
-docker exec -it mopidy bash
-apt-cache madison mopidy
-```
+1. _(Raspberry Pi only)_ Force audio through 3.5 mm jack: `sudo raspi-config`
+
+1. Enable and start SSH:
+   ```sh
+   sudo systemctl enable ssh
+   sudo systemctl start ssh
+   ```
+
+1. Create SSH directory:
+   ```sh
+   cd ~
+   install -d -m 700 ~/.ssh
+   ```
+
+1. **Run from the master machine:**<br>
+   Copy public key to authorized_keys:
+   ```sh
+   cat ~/.ssh/id_rsa.pub | ssh <user>@<host> 'cat >> .ssh/authorized_keys'
+   ```
