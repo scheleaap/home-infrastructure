@@ -13,10 +13,11 @@ mopidy_spotify_password: "{{ vault_mopidy_spotify_password }}"
 mopidy_spotify_client_id: "{{ vault_mopidy_spotify_client_id }}"
 mopidy_spotify_client_secret: "{{ vault_mopidy_spotify_client_secret }}"
 mopidy_spotify_allow_cache: false
-mopidy_audio_output: "audioresample ! audioconvert ! audio/x-raw,rate=48000,channels=2,format=S16LE ! wavenc ! filesink location=/tmp/snapfifo"
+mopidy_audio_output: "audioresample ! audioconvert ! audio/x-raw,rate=44100,channels=2,format=S16LE ! wavenc ! filesink location=/tmp/snapfifo"
 mopidy_version: "3.1.1-1"
 raspotify_backend_args: "--backend pipe --device /tmp/snapfifo"
 raspotify_device_name: "🙉"
+raspotify_version: "0.16.0~librespot.v0.1.3-37-g0adb851"
 snapcast_version: "0.22.0"
 snapcast_install_server: true
 snapcast_server_buffer_ms: 400

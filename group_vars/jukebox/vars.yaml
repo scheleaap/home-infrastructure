@@ -29,7 +29,6 @@ rfid_jukebox_albums:
   "043ab17af36781": "spotify:album:4y83vqVrHDM6ZVK9oyOjhG"  # Mammal Hands - Animalia
   "04d6b27af36780": "spotify:album:2Ua7bVJnCpzcfqChuUBgZY"  # Mammal Hands - Floa
   "04deb27af36780": "spotify:album:6MQXgLKSXLb8SwZ4m7STNc"  # Beirut - Gulag Orkestar
-  "04c4b27af36780": "http://icecast.omroep.nl/radio2-bb-mp3"  # NPO Radio 2 (tijdelijk)
 
 rfid_jukebox_commands:
   "ebd1a421": "stop"  # Big chipcard
