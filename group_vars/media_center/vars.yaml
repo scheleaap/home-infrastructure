@@ -1,6 +1,6 @@
 ---
 mopidy_hostname: "::"
-mopidy_iris_version: 3.55.4
+mopidy_iris_version: 3.57.6
 mopidy_iris_country: NL
 mopidy_iris_locale: nl_NL
 mopidy_lastfm_enabled: true
