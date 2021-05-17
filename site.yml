@@ -50,6 +50,12 @@
       loop:
         - one.sh
         - random.sh
+    - name: "Ensure the rfid-jukebox user is in the audio group"
+      become: true
+      user:
+        name: rfid-jukebox
+        append: true
+        groups: audio
 
 - hosts: media_center
   become_user: root
