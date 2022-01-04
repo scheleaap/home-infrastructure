@@ -10,6 +10,7 @@ _(See below for [setup instructions](#setup))_
 1. Modify `hosts` and `site.yml` as appropriate.
 1. Make sure you have defined all secrets: rename all `vault.yaml.default` files to `vault.yaml` and fill in the values as appropriate.
 1. ```sh
+   pipenv run ansible-galaxy collection install -r requirements.yml
    pipenv run ansible-galaxy install -r requirements.yml -p roles/
    pipenv run ansible-playbook site.yml -i hosts
    pipenv run ansible-playbook site.yml -i hosts -l media_center --tags raspotify
