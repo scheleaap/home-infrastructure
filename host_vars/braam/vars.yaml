@@ -1,4 +1,5 @@
 ---
 raspberrypi_audio_mode: justboom_dac
+rfid_jukebox_reader: "modified"
 snapcast_architecture: armhf
 sounds_audio_device: dmix:CARD=sndrpijustboomd
