@@ -2,6 +2,12 @@
 - hosts: all
   become_user: root
   become_method: sudo
+  tasks:
+    - name: "Ensure the apt cache is up to date"
+      become: true
+      apt:
+        update_cache: yes
+        cache_valid_time: 86400  # 1 day
   roles:
     - role: env-common
 

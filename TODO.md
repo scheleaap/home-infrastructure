@@ -1,12 +1,10 @@
-* Make Snapserver sample rate configurable
+Disable HDMI on braam:
 
-## Mount read-only
+Based on https://forums.raspberrypi.com/viewtopic.php?p=1935276
 
-Echt read-only mounten werkt niet goed omdat SSL-certificaten dan niet meer kunnen worden gecontroleerd.
+I have first reverted back to the old (non-KMS) driver
 
+Disable HDMI: /opt/vc/bin/tvservice -o
+Enable HDMI again: /opt/vc/bin/tvservice -o
 
-## General & Other
-
-- Install Kodi + plugins + configure proxy NL
-- Automatic Raspbian updates
-- Infrared control
+Perhaps it would be enough to change the asound configuration

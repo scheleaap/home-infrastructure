@@ -45,6 +45,8 @@ On every target machine you would like to mananage, execute the following steps:
 
 1. _(Raspberry Pi only)_ Force audio through 3.5 mm jack: `sudo raspi-config`
 
+1. _(Raspberry Pi only)_ Upgrade the firmware: `sudo rpi-update`
+
 1. Enable and start SSH:
    ```sh
    sudo systemctl enable ssh

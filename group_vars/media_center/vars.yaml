@@ -1,24 +1,25 @@
 ---
 mopidy_hostname: "::"
-mopidy_iris_version: 3.60.1
+mopidy_iris_version: 3.63.0
 mopidy_iris_country: NL
 mopidy_iris_locale: nl_NL
 mopidy_lastfm_enabled: true
 mopidy_lastfm_username: "{{ vault_mopidy_lastfm_username }}"
 mopidy_lastfm_password: "{{ vault_mopidy_lastfm_password }}"
-mopidy_spotify_enabled: true
+mopidy_spotify_enabled: false
 mopidy_spotify_username: "{{ vault_mopidy_spotify_username }}"
 mopidy_spotify_password: "{{ vault_mopidy_spotify_password }}"
 # See https://mopidy.com/ext/spotify/#authentication
 mopidy_spotify_client_id: "{{ vault_mopidy_spotify_client_id }}"
 mopidy_spotify_client_secret: "{{ vault_mopidy_spotify_client_secret }}"
 mopidy_spotify_allow_cache: false
-mopidy_audio_output: "audioresample ! audioconvert ! audio/x-raw,rate=44100,channels=2,format=S16LE ! wavenc ! filesink location=/tmp/snapfifo"
-mopidy_version: "3.2.0-1"
-raspotify_backend_args: "--backend pipe --device /tmp/snapfifo"
+mopidy_audio_output: "audioresample ! audioconvert ! audio/x-raw,rate=44100,channels=2,format=S16LE ! wavenc ! filesink location=/run/snapserver/snapfifo"
+mopidy_version: "3.3.0-1"
+raspotify_audio_backend: pipe
+raspotify_audio_device: /run/snapserver/snapfifo
 raspotify_device_name: "🙉 ({{ inventory_hostname }})"
-# raspotify_version: "not used right now"
-snapcast_version: "0.22.0"
+raspotify_version: "0.41.0~librespot.v0.4.1"
+snapcast_version: "0.26.0"
 snapcast_install_server: true
 snapcast_server_buffer_ms: 400
-snapcast_server_source: "pipe:///tmp/snapfifo?name=default&sampleformat=44100:16:2"
+snapcast_server_source: "pipe:///run/snapserver/snapfifo?name=default&sampleformat=44100:16:2"
