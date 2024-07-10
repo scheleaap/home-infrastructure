@@ -32,7 +32,7 @@ pip3 install --user pipenv
 
 # Create pipenv with installed dependencies
 PATH=~/.local/bin:$PATH && \
-pipenv --three && \
+pipenv && \
 pipenv update
 ```
 
