@@ -13,6 +13,7 @@ _(See below for [setup instructions](#setup))_
    pipenv run ansible-galaxy collection install -r requirements.yml
    pipenv run ansible-galaxy install -r requirements.yml -p roles/
    pipenv run ansible-playbook site.yml -i hosts
+   pipenv run ansible-playbook site.yml -i hosts -l framboos
    pipenv run ansible-playbook site.yml -i hosts -l media_center --tags raspotify
    # --ask-vault-pass
    # --ask-become-pass
@@ -27,13 +28,18 @@ On the machine you would like to run this playbook on, run:
 
 ```sh
 # Install pip3 and pipenv
-sudo apt install python3-pip python3-debian && \
+sudo apt install python3-pip && \
 pip3 install --user pipenv
 
 # Create pipenv with installed dependencies
 PATH=~/.local/bin:$PATH && \
 pipenv && \
 pipenv update
+
+# If you use the default system Python
+sudo apt install python3-debian
+# If you use Pyenv
+pip install python-debian
 ```
 
 
