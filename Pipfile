@@ -7,6 +7,7 @@ verify_ssl = true
 
 [packages]
 ansible = "*"
+python-debian = "*"
 
 [requires]
-python_version = "3.10"
+python_version = "3.12"

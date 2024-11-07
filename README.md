@@ -27,7 +27,7 @@ On the machine you would like to run this playbook on, run:
 
 ```sh
 # Install pip3 and pipenv
-sudo apt install python3-pip && \
+sudo apt install python3-pip python3-debian && \
 pip3 install --user pipenv
 
 # Create pipenv with installed dependencies
