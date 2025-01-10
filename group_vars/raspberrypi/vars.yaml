@@ -1,2 +1,3 @@
 ---
+env_common_install_docker: false
 raspberrypi_shutdown_hook_command: "/usr/local/share/sounds/rfid-jukebox/random.sh on-shutdown"

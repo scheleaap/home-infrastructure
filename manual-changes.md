@@ -2,12 +2,17 @@
 
 ## `scheleaapub`
 
+Zed: https://zed.dev/install.sh
+
+Install fonts:
+* Sabon (https://font.download/font/sabon)
+
 ```sh
-sudo apt install nomacs gthumb totem
+sudo apt install nomacs gthumb totem pandoc texlive-full wkhtmltopdf
 ```
 
 ```sh
-snap install 
+snap install
 ```
 
 ```sh
@@ -15,9 +20,9 @@ git clone git@github.com:scheleaap/ansible-role-env-common.git
 git clone git@github.com:scheleaap/ansible-role-env-desktop.git
 git clone git@github.com:scheleaap/ansible-role-raspberrypi.git
 git clone git@github.com:scheleaap/ansible-role-rfid-jukebox.git
-git clone git@github.com:scheleaap/ansible-role-raspotify.git   
-git clone git@github.com:scheleaap/ansible-role-snapcast.git    
-git clone git@github.com:scheleaap/ansible-role-mopidy.git      
+git clone git@github.com:scheleaap/ansible-role-raspotify.git
+git clone git@github.com:scheleaap/ansible-role-snapcast.git
+git clone git@github.com:scheleaap/ansible-role-mopidy.git
 git clone git@github.com:scheleaap/baederland-swimming-course-checker.git
 ```
 
@@ -28,7 +33,7 @@ ln -s ~/dev/ansible-role-mopidy ~/dev/home-infrastructure/roles/mopidy
 ln -s ~/dev/ansible-role-snapcast roles/snapcast
 ln -s ~/dev/ansible-role-rfid-jukebox ~/dev/home-infrastructure/roles/rfid-jukebox
 ln -s ~/dev/ansible-role-raspotify ~/dev/home-infrastructure/roles/raspotify
-ln -s ~/dev/ansible-role-raspberrypi ~/dev/home-infrastructure/roles/raspberrypi  
+ln -s ~/dev/ansible-role-raspberrypi ~/dev/home-infrastructure/roles/raspberrypi
 ```
 
 ```sh
