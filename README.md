@@ -22,7 +22,7 @@ _(See below for [setup instructions](#setup))_
 
 ## Setup
 
-### Master machine
+### Main machine
 
 On the machine you would like to run this playbook on, run:
 
@@ -53,20 +53,32 @@ On every target machine you would like to mananage, execute the following steps:
 
 1. _(Raspberry Pi only)_ Upgrade the firmware: `sudo rpi-update`
 
-1. Enable and start SSH:
+1. Install the SSH server:
+   ```sh
+   sudo apt install openssh-server
+   ```
+
+1. _(Optional, this might have been done already)_ Enable and start SSH:
    ```sh
    sudo systemctl enable ssh
    sudo systemctl start ssh
    ```
 
-1. Create SSH directory:
+1. _(Optional, this might have been done already)_ Create SSH directory:
    ```sh
    cd ~
    install -d -m 700 ~/.ssh
    ```
 
-1. **Run from the master machine:**<br>
+1. **Run from the main machine:**<br>
    Copy public key to authorized_keys:
    ```sh
-   cat ~/.ssh/id_rsa.pub | ssh <user>@<host> 'cat >> .ssh/authorized_keys'
+   ssh-copy-id <user>@<host>
+   ```
+   <!-- This is equivalent to: cat ~/.ssh/id_rsa.pub | ssh <user>@<host> 'cat >> .ssh/authorized_keys' -->
+
+1. **Run from the main machine:**<br>
+   _(Optional)_ Copy the public/private key pair:
+   ```sh
+   scp ~/.ssh/id_rsa* <user>@<host>:~/.ssh
    ```

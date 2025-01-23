@@ -1,10 +1,12 @@
 #localhost ansible_connection=local
 scheleaapub ansible_connection=local
+gorilla ansible_user=wout ansible_python_interpreter=auto
 framboos ansible_user=pi ansible_python_interpreter=auto ansible_become_pass=raspberry
 braam ansible_user=pi ansible_python_interpreter=auto ansible_become_pass=raspberry
 
 [desktop]
 scheleaapub
+gorilla
 
 [jukebox]
 framboos
