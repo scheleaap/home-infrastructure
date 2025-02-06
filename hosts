@@ -8,7 +8,7 @@ braam ansible_user=pi ansible_python_interpreter=auto ansible_become_pass=raspbe
 scheleaapub
 gorilla
 
-[jukebox]
+[rfid_jukebox]
 framboos
 braam
 

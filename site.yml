@@ -17,52 +17,51 @@
   roles:
     - role: env-desktop
 
-# The RFID jukebox is not used right now
-#- hosts: jukebox
-#  become_user: root
-#  become_method: sudo
-#  tags: rfid-jukebox
-#  roles:
-#    - role: rfid-jukebox
-#  tasks:
-#    - name: "Install packages to play audio files from the command line"
-#      become: true
-#      apt:
-#        name: "{{ packages }}"
-#      vars:
-#        packages:
-#          - sox
-#          - libsox-fmt-all
-#    - name: "Ensure /usr/local/share/sounds/rfid-jukebox/ exists"
-#      become: true
-#      file:
-#        path: /usr/local/share/sounds/rfid-jukebox/
-#        state: directory
-#    - name: "Copy audio file for notifications"
-#      become: true
-#      copy:
-#        src: /usr/share/sounds/Yaru/stereo/message-new-instant.oga
-#        dest: /usr/local/share/sounds/rfid-jukebox/yaru-message-new-instant.oga
-#    - name: "Copy audio files for notifications"
-#      become: true
-#      copy:
-#        src: files/sounds/
-#        dest: /usr/local/share/sounds/rfid-jukebox/
-#    - name: "Copy sound scripts for notifications"
-#      become: true
-#      template:
-#        src: "templates/{{ item }}.j2"
-#        dest: "/usr/local/share/sounds/rfid-jukebox/{{ item }}"
-#        mode: 0755
-#      loop:
-#        - one.sh
-#        - random.sh
-#    - name: "Ensure the rfid-jukebox user is in the audio group"
-#      become: true
-#      user:
-#        name: rfid-jukebox
-#        append: true
-#        groups: audio
+- hosts: rfid_jukebox
+  become_user: root
+  become_method: sudo
+  tags: rfid_jukebox
+  roles:
+    - role: rfid-jukebox
+  tasks:
+    - name: "Install packages to play audio files from the command line"
+      become: true
+      apt:
+        name: "{{ packages }}"
+      vars:
+        packages:
+          - sox
+          - libsox-fmt-all
+    - name: "Ensure /usr/local/share/sounds/rfid-jukebox/ exists"
+      become: true
+      file:
+        path: /usr/local/share/sounds/rfid-jukebox/
+        state: directory
+    - name: "Copy audio file for notifications"
+      become: true
+      copy:
+        src: /usr/share/sounds/Yaru/stereo/message-new-instant.oga
+        dest: /usr/local/share/sounds/rfid-jukebox/yaru-message-new-instant.oga
+    - name: "Copy audio files for notifications"
+      become: true
+      copy:
+        src: files/sounds/
+        dest: /usr/local/share/sounds/rfid-jukebox/
+    - name: "Copy sound scripts for notifications"
+      become: true
+      template:
+        src: "templates/{{ item }}.j2"
+        dest: "/usr/local/share/sounds/rfid-jukebox/{{ item }}"
+        mode: 0755
+      loop:
+        - one.sh
+        - random.sh
+    - name: "Ensure the rfid-jukebox user is in the audio group"
+      become: true
+      user:
+        name: rfid-jukebox
+        append: true
+        groups: audio
 
 - hosts: media_center
   become_user: root
