@@ -70,9 +70,8 @@
   roles:
     - role: snapcast
       tags: snapcast
-# Mopidy is not used right now
-#    - role: mopidy
-#      tags: mopidy
+    - role: mopidy
+      tags: mopidy
     - role: raspotify
       tags: raspotify
 
