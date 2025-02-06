@@ -7,10 +7,20 @@ Zed: https://zed.dev/install.sh
 Install fonts:
 * Sabon (https://font.download/font/sabon)
 
+Apt:
 ```sh
 sudo apt install nomacs gthumb totem pandoc texlive-full wkhtmltopdf
 ```
 
+Flatpak:
+```sh
+sudo apt install flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+flatpak install flathub io.github.orontee.Argos
+```
+
+Development:
 ```sh
 git clone git@github.com:scheleaap/ansible-role-env-common.git
 git clone git@github.com:scheleaap/ansible-role-env-desktop.git
@@ -32,6 +42,7 @@ ln -s ~/dev/ansible-role-rfid-jukebox ~/dev/home-infrastructure/roles/rfid-jukeb
 ln -s ~/dev/ansible-role-snapcast ~/dev/home-infrastructure/roles/snapcast
 ```
 
+Fonts:
 ```sh
 gsettings set org.gnome.desktop.interface font-name "Ubuntu 9" (9 @ home, 10 @ work)
 gsettings set org.gnome.desktop.interface monospace-font-name "Ubuntu Mono 10" (10 @ home, 11 @ work)
