@@ -20,6 +20,11 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 flatpak install flathub io.github.orontee.Argos
 ```
 
+Add `wout` to `docker` group for sudoless access. Note: In the future, try setting up Docker in 'rootless' mode or use Podman.
+```sh
+sudo usermod -a -G docker wout
+```
+
 Development:
 ```sh
 git clone git@github.com:scheleaap/ansible-role-env-common.git

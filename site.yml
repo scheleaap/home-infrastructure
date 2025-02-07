@@ -10,12 +10,14 @@
         cache_valid_time: 86400  # 1 day
   roles:
     - role: env-common
+      tags: common
 
 - hosts: desktop
   become_user: root
   become_method: sudo
   roles:
     - role: env-desktop
+      tags: desktop
 
 - hosts: rfid_jukebox
   become_user: root
