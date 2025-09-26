@@ -5,7 +5,7 @@ rfid_jukebox_albums:
   "042abc4a325e81": "spotify:album:2WT1pbYjLJciAR26yMebkH"  # The Dark Side Of The Moon
   "0426bc4a325e81": "spotify:album:02Ast9sM8awNiA2ViVjO4Q"  # Nightfall in Middle Earth
   "042ebc4a325e81": "spotify:album:1YaUAkNsLKXtJfb0FVZcyu"  # New York - Addis - London
-  "047cb07af36781": "http://icecast.omroep.nl/radio1-bb-mp3"  # NPO Radio 1
+  "047cb07af36781": "https://icecast.omroep.nl/radio1-bb-mp3"  # NPO Radio 1
   "044bbb4a325e81": "spotify:album:0wKklfUh0GTGAICfuQxpMP"  # Bonga - Angola 72/74
   "0446bb4a325e81": "spotify:album:3DrgM5X3yX1JP1liNLAOHI"  # Arcade Fire - The Suburbs
   "0442bb4a325e81": "spotify:playlist:7klfbs5nEXp6KiVHcHcZXz"  # Feestselectie
