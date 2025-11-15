@@ -17,12 +17,12 @@ mopidy_spotify_client_id: "{{ vault_mopidy_spotify_client_id }}"
 mopidy_spotify_client_secret: "{{ vault_mopidy_spotify_client_secret }}"
 mopidy_spotify_allow_cache: false
 
-raspotify_version: "0.45.0~librespot.v0.5.0-84d28e8"
+raspotify_version: "0.48.0~librespot.v0.8.0-d36f9f1"
 raspotify_audio_backend: pipe
 raspotify_audio_device: /run/snapserver/snapfifo
 raspotify_device_name: "🙉 ({{ inventory_hostname }})"
 
-snapcast_version: "0.29.0"
+snapcast_version: "0.34.0"
 snapcast_install_server: true
 snapcast_server_buffer_ms: 400
 snapcast_server_source: "pipe:///run/snapserver/snapfifo?name=default&sampleformat=44100:16:2"
